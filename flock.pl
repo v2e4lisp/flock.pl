@@ -12,7 +12,7 @@ open(my $fd, ">", $lock_file) or
 flock($fd, LOCK_NB | LOCK_EX) or
     die "Cannot hold the lock $lock_file";
 
-my $pid = fork();
+my $pid = fork;
 if ($pid == -1) {
     die "Failed to fork a child process";
 }
