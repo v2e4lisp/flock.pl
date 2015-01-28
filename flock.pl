@@ -23,11 +23,3 @@ if ($pid) {
     close $fd;
     exec $command, @args;
 }
-
-END {
-    if ($fd) {
-        close $fd;
-    }
-}
-
-
